@@ -1,0 +1,386 @@
+/* style.css - 最终稳定版 - 清新蓝调 */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.65; 
+    font-size: 15.5px; 
+    margin: 0;
+    padding: 15px;
+    /* === 修改: 背景和文字颜色 === */
+    background-color: #e6f2ff; /* 非常非常浅的蓝色，接近天空蓝 */
+    color: #4a5c68;       /* 深灰蓝色文字，保持可读性 */
+    /* === 修改结束 === */
+}
+
+.container {
+    /* === 修改: 卡片背景和边框 === */
+    background-color: #ffffff; /* 卡片保持白色以突出 */
+    border: 1px solid #d0e0f0; /* 边框颜色配合浅蓝背景 */
+    /* === 修改结束 === */
+    padding: 20px;
+    border-radius: 16px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* 保持轻微阴影 */
+    width: 100%;
+    max-width: 480px;
+    margin: 15px auto;
+    box-sizing: border-box;
+}
+
+h1 {
+    /* === 修改: 标题颜色 === */
+    color: #3b748f; /* 稳重的蓝灰色 */
+    /* === 修改结束 === */
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.8em; 
+    font-weight: 700; 
+    letter-spacing: 0.3px; 
+}
+
+h2 {
+    /* === 修改: 次标题颜色和下划线 === */
+    color: #5a8a9f; 
+    border-bottom: 1px solid #c0d6e4; /* 下划线颜色调整 */
+    /* === 修改结束 === */
+    margin-top: 25px;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    font-size: 1.4em; 
+    font-weight: 600; 
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500; 
+    color: #6a7a82; /* 保持v0.3.3-fix的颜色 */
+    font-size: 0.92em; 
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 11px 14px;
+    margin-bottom: 16px;
+    /* === 修改: 输入框边框和背景 === */
+    border: 1px solid #c8d7e3; /* 边框颜色调整 */
+    background-color: #f7fafd; /* 背景更浅，接近白色 */
+    /* === 修改结束 === */
+    border-radius: 8px; 
+    box-sizing: border-box;
+    font-size: 0.98em; 
+    color: #454f5b; 
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; 
+}
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="number"]:focus,
+select:focus {
+    /* === 修改: 焦点颜色 === */
+    border-color: #7cabbf; 
+    box-shadow: 0 0 0 0.15rem rgba(124, 171, 191, .2); /* 阴影透明度略减 */
+    /* === 修改结束 === */
+    outline: none;
+}
+
+hr {
+    border: none;
+    /* === 修改: 分割线颜色 === */
+    border-top: 1px solid #d8e2e9; 
+    /* === 修改结束 === */
+    margin: 25px 0;
+}
+
+/* --- 按钮样式 (基于v0.3.3-fix的成功版本，只调整颜色) --- */
+button, .button-primary, .button-secondary {
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06); /* 阴影更轻 */
+    cursor: pointer;
+    font-size: 0.98em; 
+    font-weight: 600; 
+    letter-spacing: 0.2px; 
+    width: 100%;
+    transition: background-color 0.2s ease, opacity 0.2s ease; 
+    text-align: center;
+    margin-top: 10px;
+}
+
+.button-primary { 
+    /* === 修改: 主按钮颜色 === */
+    background-color: #5d9cec; /* 清新明亮的蓝色 */
+    /* === 修改结束 === */
+}
+.button-primary:hover {
+    background-color: #4a8ae0; 
+    opacity: 0.95; /* 保留安全的opacity交互 */
+}
+.button-primary:active { 
+    background-color: #3b7dc8; 
+    opacity: 0.9;
+}
+
+
+#addTaskButton.button-primary {
+    /* === 修改: 添加按钮颜色 === */
+    background-color: #5cb85c; /* 清新绿 */
+    box-shadow: 0 1px 3px rgba(92, 184, 92, 0.15);
+    /* === 修改结束 === */
+    margin-bottom: 15px;
+}
+#addTaskButton.button-primary:hover {
+    background-color: #4cae4c;
+    opacity: 0.95;
+}
+#addTaskButton.button-primary:active {
+    background-color: #449d44;
+    opacity: 0.9;
+}
+
+
+.button-secondary { 
+    /* === 修改: 次要按钮颜色 === */
+    background-color: #a0b3c4; /* 柔和的蓝灰色 */
+    color: #f8f9fa; 
+    /* === 修改结束 === */
+    font-size: 0.88em; 
+    font-weight: 500; 
+}
+.button-secondary:hover {
+    background-color: #8fa3b3;
+    opacity: 0.95;
+}
+.button-secondary:active { 
+    background-color: #7e92a2;
+    opacity: 0.9;
+}
+
+
+.button-danger { 
+    /* === 修改: 危险按钮颜色 === */
+    background-color: #f07f7f; /* 柔和的红色 */
+    /* === 修改结束 === */
+}
+.button-danger:hover {
+    background-color: #e86a6a;
+    opacity: 0.95;
+}
+.button-danger:active { 
+    background-color: #d9534f; /* 略深一点 */
+    opacity: 0.9;
+}
+
+
+button:disabled, .button-primary:disabled, .button-secondary:disabled {
+    background-color: #e2e8f0; 
+    color: #a0aec0; 
+    cursor: not-allowed; 
+    opacity: 0.7; 
+    box-shadow: none; 
+}
+
+/* --- 任务项样式 --- */
+.task-item {
+    /* === 修改: 任务项背景和边框 === */
+    background-color: #f8fcff; /* 非常浅的蓝色调背景 */
+    border: 1px solid #e0eaf2; 
+    /* === 修改结束 === */
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px; 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03); /* 更轻的阴影 */
+    transition: box-shadow 0.2s ease; 
+    position: relative;
+}
+.task-item:hover {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04); 
+}
+.task-item:last-child { margin-bottom: 0; }
+
+.task-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.task-title { 
+    font-weight: 600; 
+    /* === 修改: 任务标题颜色 === */
+    color: #4a768c; 
+    /* === 修改结束 === */
+    font-size: 1.05em; 
+}
+.task-controls { display: flex; gap: 6px; }
+.control-button {
+    /* === 修改: 控制按钮颜色 === */
+    background-color: #eaf2f5; 
+    border: 1px solid #d0dce3; 
+    color: #526a78; 
+    /* === 修改结束 === */
+    padding: 5px 8px; font-size: 0.95em; border-radius: 6px; cursor: pointer;
+    line-height: 1; min-width: 32px; height: 32px; display: flex;
+    align-items: center; justify-content: center;
+    transition: background-color 0.15s ease, opacity 0.15s ease; 
+}
+.control-button:hover { 
+    background-color: #dce6eb; 
+    opacity: 0.9;
+}
+.control-button:disabled { background-color: #f8f9fa; color: #adb5bd; border-color: #e9ecef; opacity: 0.7;}
+.delete-task-button { 
+    /* === 修改: 删除按钮颜色 === */
+    color: #d9534f; 
+    border-color: #f8d7da; 
+    background-color: #fcefee; 
+    /* === 修改结束 === */
+}
+.delete-task-button:hover { background-color: #f8d7da; color: #b94a48; opacity: 0.9;}
+
+/* --- 模板管理区域 --- */
+.template-management {
+    margin-top: 20px; padding: 18px; 
+    /* === 修改: 模板区域背景和边框 === */
+    background-color: #e6f0fa; 
+    border: 1px solid #cdd8e2; 
+    /* === 修改结束 === */
+    border-radius: 10px; 
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03); 
+}
+.template-management h2 { 
+    font-size: 1.2em; 
+    /* === 修改: 模板标题颜色 === */
+    color: #3b6279; 
+    border-bottom: 1px solid #b8c8d2; 
+    /* === 修改结束 === */
+    margin-bottom: 15px; 
+}
+.template-controls-row { display: flex; gap: 8px; margin-bottom: 10px; align-items: center; }
+.template-controls-row:last-child { margin-bottom: 0; }
+.template-controls-row select, .template-controls-row input[type="text"] {
+    flex-grow: 1; margin-bottom: 0; border-radius: 6px; 
+    border: 1px solid #c0cdd7; 
+    font-size: 0.92em; 
+}
+#loadTemplateButton, #saveTemplateButton, #deleteTemplateButton {
+    width: auto; min-width: 70px; padding: 8px 12px; font-size: 0.85em; 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05); 
+    border-radius: 6px; 
+}
+#loadTemplateButton, #saveTemplateButton {
+    background-color: #8fa8bb; 
+    color: #fff;
+}
+#loadTemplateButton:hover, #saveTemplateButton:hover {
+    background-color: #7a90a2;
+    opacity: 0.95;
+}
+#deleteTemplateButton.button-danger { 
+    background-color: #f07f7f;
+    color: #fff;
+}
+#deleteTemplateButton.button-danger:hover {
+    background-color: #e86a6a;
+    opacity: 0.95;
+}
+
+/* --- 日期状态指示器 --- */
+.date-status {
+    display: block; margin-top: -10px; margin-bottom: 12px;
+    padding: 7px 10px; font-size: 0.88em; border-radius: 6px; 
+    text-align: left; font-weight: 500; line-height: 1.45;
+}
+.date-status:empty { display: none; }
+.date-status.work-day { 
+    /* === 修改: 日期状态颜色 === */
+    background-color: #d3e9ff; /* 浅蓝色 */
+    color: #2a5a8c; 
+    border: 1px solid #b3d1f0; 
+    /* === 修改结束 === */
+}
+.date-status.rest-day { 
+    /* === 修改: 日期状态颜色 === */
+    background-color: #ffe3f0; /* 浅粉色 */
+    color: #9f3a60; 
+    border: 1px solid #f8c0d8; 
+    /* === 修改结束 === */
+}
+.date-status .warm-message { display: block; font-size: 0.95em; margin-top: 4px; font-style: italic; opacity: 0.9; }
+.date-status.work-day .warm-message { color: #1e456a; }
+.date-status.rest-day .warm-message { color: #7a2c4a; }
+
+
+/* --- 结果展示区 --- */
+#result {
+    margin-top: 25px; padding: 18px; 
+    /* === 修改: 结果区背景和边框 === */
+    background-color: #eaf2f8; 
+    border: 1px solid #cce0ed; 
+    /* === 修改结束 === */
+    border-radius: 10px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04); 
+}
+#result h2 { 
+    font-size: 1.3em; 
+    /* === 修改: 结果标题颜色 === */
+    color: #3b748f; 
+    /* === 修改结束 === */
+    border-bottom: none; margin-bottom: 15px; 
+}
+#result p { margin-bottom: 8px; line-height: 1.6; color: #4a5c68; } 
+#result strong { color: #2c4758; font-weight: 600; } 
+#targetDeadlineInfo { padding-bottom: 10px; margin-bottom: 10px; border-bottom: 1px dashed #c0d6e4; }
+#targetDeadlineInfo .highlight { color: #3b748f; font-weight: bold; } 
+#timelineDisplay h3 { 
+    font-size: 1.1em; 
+    color: #3b748f; 
+    margin-bottom: 10px; 
+}
+#timelineDisplay .timeline-entry {
+    padding: 10px 12px; margin-bottom: 8px; border-left: 3px solid #7cabbf; 
+    background-color: #fbfcfd; border-radius: 0 6px 6px 0; 
+}
+#timelineDisplay .timeline-entry .time-range { color: #3b748f; font-weight: 600; font-size: 1em; }
+#timelineDisplay .timeline-entry .task-name-display { color: #4a5c68; font-size: 0.95em; }
+#timelineDisplay .timeline-entry .duration-display { color: #6a7a82; font-size: 0.88em; }
+#firstTaskStartTimeInfo, #totalDurationInfo {
+    font-weight: 500; margin-top: 15px; padding: 10px 12px;
+    background-color: #eaf2f5; 
+    border-radius: 6px; text-align: center;
+    color: #4a5c68; 
+    font-size: 0.95em; 
+}
+#firstTaskStartTimeInfo .highlight, #totalDurationInfo .highlight { color: #50b08f; } 
+
+/* --- 页脚 --- */
+.footer { margin-top: 30px; font-size: 0.85em; color: #7a8b99; text-align: center; padding-bottom: 15px; }
+.footer .signature { font-size: 0.8em; color: #9aadb9; margin-top: 5px; }
+
+/* --- 错误信息 --- */
+.error-message {
+    color: #721c24; background-color: #f8d7da; border: 1px solid #f5c6cb;
+    padding: 10px 12px; margin-bottom: 15px; 
+    border-radius: 6px; 
+    text-align: center; 
+    font-weight: 500;
+    font-size: 0.92em; 
+}
+
+/* --- 响应式调整 (与"稳定版v0.3.3-fix"一致) --- */
+@media (max-width: 480px) {
+    .container { padding: 15px 12px; border-radius: 12px; } 
+    h1 { font-size: 1.6em; }
+    h2 { font-size: 1.3em; }
+    .template-management h2 { font-size: 1.15em; }
+    #result h2 { font-size: 1.25em; }
+    #timelineDisplay h3 { font-size: 1.05em; }
+    input, select, button, .button-primary, .button-secondary {
+        font-size: 0.92em; 
+        padding: 10px 12px;
+    }
+    .control-button { padding: 5px 7px; min-width: 30px; height: 30px; font-size: 0.9em; } 
+    #loadTemplateButton, #saveTemplateButton, #deleteTemplateButton { padding: 7px 10px; font-size: 0.82em; } 
+    .date-status { padding: 6px 9px; font-size: 0.82em; } 
+}
